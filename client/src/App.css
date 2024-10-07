@@ -1,0 +1,188 @@
+.gift-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #b22222, #821502);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Keyframes for background gradient shift */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Central gift box */
+.gift-box {
+  width: auto;
+  width: 90%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: #228b22;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid #ffd700;
+  min-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+/* Input Container for Form Inputs */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Themed Input Fields */
+.input-container input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px solid #ffd700; /* Golden border to match the theme */
+  max-width: 300px;
+  width: 100%;
+  background-color: #fffacd; /* Light yellow background for festive theme */
+  color: #b22222;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+  text-align: center; /* Centered text */
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #ffdb58; /* Slightly brighter yellow on focus */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* SVG Sparkle Animation */
+svg.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.sparkles circle {
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+/* Festive bow/ribbon effect */
+.gift-box::before, .gift-box::after {
+  content: '';
+  position: absolute;
+  background-color: #ffd700;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.gift-box::after {
+  left: 50%;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #ffd700;
+  transform: translateX(-50%);
+}
+
+/* Title */
+.title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Buttons */
+.generate-button, .location-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffd700, #ffdb58);
+  color: #b22222;
+  margin: 10px auto; /* Center the button */
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.generate-button:hover, .location-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.generate-button span {
+  font-size: 1.5rem;
+}
+
+/* Gift idea display */
+.gift-display {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Location enabled message */
+.location-enabled {
+  margin-top: 20px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
