@@ -1,4 +1,5 @@
 Last-Minute Gift Generator"
 Problem: Forgetting to buy gifts until the last minute.
 Solution: A fun app that generates quirky, quick gift ideas based on what’s around you (e.g., nearby stores or common household items). The app can use location services to recommend stores or use humorous prompts to suggest things like “Wrap a fancy banana in your kitchen and call it ‘modern art’.” You could make it even funnier with ridiculous but doable DIY gift ideas.
+need .env with server folder
 
